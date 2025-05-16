@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bfloresS6A.Views.vCrud"
+             Title="vCrud">
+    <VerticalStackLayout 
+        Spacing="20" 
+        Padding="20" 
+        >
+
+        <Label 
+            Text="CRUD DE PRODUCTOS"
+            FontSize="25"
+            TextColor="Brown"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <!-- Encabezados de la tabla -->
+        <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Código" 
+                   Grid.Column="0" 
+                   BackgroundColor="DarkBlue" 
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   Padding="5" 
+                   HorizontalTextAlignment="Center"/>
+            <Label Text="Nombre" 
+                   Grid.Column="1" 
+                   BackgroundColor="DarkBlue"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   Padding="5" 
+                   HorizontalTextAlignment="Center"/>
+            <Label Text="Precio" 
+                   Grid.Column="2" 
+                   BackgroundColor="DarkBlue"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   Padding="5" 
+                   HorizontalTextAlignment="Center"/>
+        </Grid>
+
+        
+        <ListView x:Name="lvProducto" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="Black">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Id}" 
+                                   Grid.Column="0" 
+                                   BackgroundColor="White" 
+                                   Padding="5" 
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="{Binding Nombre}" 
+                                   Grid.Column="1" 
+                                   BackgroundColor="White" 
+                                   Padding="5" 
+                                   HorizontalTextAlignment="Center" />
+                            <Label Text="{Binding Precio}" 
+                                   Grid.Column="2" 
+                                   BackgroundColor="White" 
+                                   Padding="5" 
+                                   HorizontalTextAlignment="Center" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
+</ContentPage>
