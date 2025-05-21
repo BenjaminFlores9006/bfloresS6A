@@ -16,6 +16,12 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
+        <Button x:Name="btnAñadir"
+                Text="Añadir Producto"
+                Clicked="btnAñadir_Clicked"
+                HorizontalOptions="Center"/>
+
+
         <!-- Encabezados de la tabla -->
         <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="Black">
             <Grid.RowDefinitions>
@@ -51,7 +57,7 @@
         </Grid>
 
         
-        <ListView x:Name="lvProducto" SeparatorVisibility="None">
+        <ListView x:Name="lvProducto" SeparatorVisibility="None" ItemSelected="lvProducto_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

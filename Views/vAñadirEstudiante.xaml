@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bfloresS6A.Views.vAñadirEstudiante"
+             Title="vAñadirEstudiante">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="20"        
+        >
+        <Label 
+            Text="Añadir Producto"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            
+            />
+
+        <Entry x:Name="txtNombre"
+               Placeholder="Ingrese el nombre del producto"/>
+        <Entry x:Name="txtPrecio"
+               Placeholder="Ingrese el precio"/>
+
+        <Button x:Name="btnAñadir"
+                Text="Añadir Producto"
+                Clicked="btnAñadir_Clicked"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
