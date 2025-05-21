@@ -8,7 +8,7 @@
         Spacing="20"
         >
         <Label 
-            Text="Actualizar / Eliminar Estudiantes"
+            Text="Actualizar / Eliminar Productos"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
