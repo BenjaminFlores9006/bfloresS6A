@@ -15,7 +15,7 @@ public partial class vCrud : ContentPage
         InitializeComponent();
     }
 
-    // ? Recarga la lista cada vez que la vista aparece
+    // Recarga la lista cada vez que la vista aparece
     protected override void OnAppearing()
     {
         base.OnAppearing();
